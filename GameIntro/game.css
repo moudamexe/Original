@@ -1,0 +1,172 @@
+ul,li,p,h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 22px;
+    color: #fff;
+    background: #000;
+    font-family: /*"JFドット東雲ゴシック14",*/'Kosugi Maru', sans-serif;
+}
+
+header {
+    height: 5em+400px;
+}
+.h-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.h-nav__ttl {
+    font-size: 3rem;
+    /* float: left; */
+}
+.h-nav__ul {
+    font-size: 1.5rem;
+    list-style: none;
+    display: flex;
+/*     float: right;
+    zoom: 1;/*For IE 6/7*/
+}
+/* .h-nav__ul::before,
+.h-nav__ul::after {
+    content:"";
+    display: table;
+}
+.h-nav__ul::after {
+    clear: both;
+} */
+.h-nav__ul>li {
+    margin-right: 1em;
+}
+/* .h-nav-ul__under:hover {
+    background: #fff;
+    color: #000;
+    border-radius: 5px;
+    transition-duration: .6s; 
+} */
+a {
+    color: #fff;
+    padding: 5px;
+    text-decoration: none;
+}
+a:hover {
+    background: #fff;
+    color: #000;
+    border-radius: 5px;
+    transition-duration: .6s
+}
+
+/*=== 画像の表示エリア ================================= */
+.h-slide {
+    position: relative;
+    overflow: hidden;
+    /* 画像のサイズに合わせて変更ください */
+    max-width: 800px;
+    height: 400px;
+    margin: 1em auto 0;
+}
+   
+/*=== 画像の設定 ======================================= */
+.h-slide img {
+    display: block;
+    position: absolute;
+    /* 画像のサイズを表示エリアに合せる */
+    width: inherit;
+    height: inherit;
+    left: 100%;
+    animation: slideAnime 9s ease infinite;
+}
+   
+/*=== スライドのアニメーションを段差で開始する ========= */
+.h-slide img:nth-of-type(1) { animation-delay: 0s }
+.h-slide img:nth-of-type(2) { animation-delay: 3s }
+.h-slide img:nth-of-type(3) { animation-delay: 6s }
+   
+/*=== スライドのアニメーション ========================= */
+@keyframes slideAnime{
+    0% { left: 100%  }
+    3% { left: 0     }
+    30% { left: 0     }
+    33% { left: -100% }
+    100% { left: -100% }
+}
+
+.wrp {
+    margin-top: 5em;
+}
+.wrp-main {
+    
+}
+.wrp-main__under {
+
+}
+.under-ttl {
+    text-align: center;
+    margin-bottom: 1em;
+}
+.under-block {
+    margin: 1em;
+    display: flex;
+    align-items: center;
+}
+.under-txt {
+    text-align: center;
+    line-height: 1.5em;
+}
+.under-txt span {
+    color: red;
+}
+.under-movie {
+
+}
+
+.wrp-main__steins {
+    margin-top: 3em;
+}
+.steins-ttl {
+    text-align: center;
+    margin-bottom: 1em;
+}
+.steins-block {
+    margin: 1em;
+    display: flex;
+}
+.steins-img {
+    width: 50%;
+}
+.steins-txt {
+    margin-left: .5em;
+    text-align: center;
+    line-height: 1.5em;
+}
+.steins-txt span {
+    color: grey;
+}
+
+.wrp-main__spla {
+    margin-top: 3em;
+}
+.spla-ttl {
+    text-align: center;
+    margin-bottom: 1em;
+}
+.spla-block {
+    display: flex;
+    align-items: center;
+    margin: 1em;
+}
+.spla-txt {
+    margin-left: .5em;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+footer {
+    padding-top: 2em;
+    margin-top: 1em;
+    font-family: sans-serif;
+    font-size: 15px;
+    text-align: right;
+    border-top: 3px solid rgb(30, 6, 134);
+}
