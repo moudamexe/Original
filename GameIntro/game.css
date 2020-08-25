@@ -175,6 +175,12 @@ footer {
     .h-nav__ttl {
         display: none;
     }
+    .h-nav__ul {
+        flex-wrap: wrap;
+    }
+    .h-nav__ul li {
+        margin: 0 .5em .3em;
+    }
 
     /*=== 画像の表示エリア ================================= */
     .h-slide {
